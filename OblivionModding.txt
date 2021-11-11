@@ -1,0 +1,13 @@
+Powershell command on bottom used to help circumvent a modding issue; helped find the last write time of files at the top for a mod for the game The Elder Scrolls IV: Oblivion.
+
+[Fonts]
+SFontFile_1=Data\Fonts\Kingthings_Regular.fnt
+SFontFile_2=Data\Fonts\DarN_Kingthings_Petrock_14.fnt
+SFontFile_3=Data\Fonts\DarN_Kingthings_Petrock_16.fnt
+SFontFile_4=Data\Fonts\DarN_Oblivion_28.fnt
+SFontFile_5=Data\Fonts\Handwritten.fnt
+
+
+Y:\Games\Mods\DarNified UI 132 7z Archive-10763.1\menus
+
+foreach($file in Get-ChildItem "Y:\Games\Mods\DarNified UI 132 7z Archive-10763.1" -recurse) {$(Get-Item $file.Fullname).lastwritetime=$(Get-Date)}
