@@ -17,17 +17,17 @@ Write-Host -ForegroundColor Blue "Starting Website Connectivity Test..."
 Start-Sleep -s 1
 
 #Starts IE - 2 webpages - displays and closes sequentially 
-Start-Process iexplore "https://www.cnn.com/"
+Start-Process iexplore "https://www.microsoft.com/"
 Start-Sleep -s 30
 Get-Process iexplore | Stop-Process
 
 
-Start-Process iexplore "https://www.justice.gov/jmd/learndoj"
+Start-Process iexplore "https://www.msn.com"
 Start-Sleep -s 15
 Get-Process iexplore | Stop-Process
 
 
 #Starts Google Chrome - 2 tabs with different websites - closes
-Start-Process chrome "https://dojnet.doj.gov/" , "https://www.cnn.com/" 
+Start-Process chrome "https://www.microsoft.com/" , "https://www.msn.com/" 
 Start-Sleep -s 30
 Get-Process chrome | Stop-Process 
