@@ -1,4 +1,4 @@
-A script created for fun. A reusable prompt which will give input to the Widnows speech synthesizer to read aloud.
+# A script created for fun. A reusable prompt which will give input to the Widnows speech synthesizer to read aloud.
 
 Add-Type -AssemblyName System.speech
 
