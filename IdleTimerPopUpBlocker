@@ -1,0 +1,17 @@
+#Created by Jonathan Eggleston
+#This script detects when a window with the name "Idle timer expired" appears and stops its process.
+
+$windowTitle = "Idle timer expired"
+
+while ($true) {
+
+if ($(Get-Process | Where-Object {$_.MainWindowTitle -like "*$windowTitle*"})) 
+
+    {
+    
+    Get-Process | Where-Object {$_.MainWindowTitle -like "*$windowTitle*"} | Stop-Process
+    Write-Output "Idle pop-up blocked!"
+
+    }
+ 
+}
